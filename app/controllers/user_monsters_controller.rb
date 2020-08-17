@@ -3,7 +3,7 @@ class UserMonstersController < ApplicationController
     def index
         userMonsters = UserMonster.all
 
-        render json: UserMonster 
+        render json: userMonsters 
     end
 
     def show
