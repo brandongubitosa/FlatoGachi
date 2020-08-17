@@ -1,6 +1,6 @@
 class CreateUserMonsters < ActiveRecord::Migration[6.0]
   def change
-    create_table :names do |t|
+    create_table :user_monsters do |t|
       t.integer :hunger_level
       t.integer :happiness
       t.integer :power
