@@ -21,8 +21,8 @@ monster = Monster.create(monster_theme: "Cute", image_url:"https://cdn1.iconfind
 monster2 = Monster.create(monster_theme: "Cool", image_url:"https://vignette.wikia.nocookie.net/pixar/images/a/af/Johnny_Worthington_III.png/revision/latest?cb=20130808225542")
 monster3 = Monster.create(monster_theme: "Scary", image_url:"https://www.snesmaps.com/maps/ChronoTrigger/sprites/enemies/bosses/Lavos.png")
 
-user_monster = UserMonster.create(hunger_level: 100, happiness: 78, power: 59, user_id: user, monster_id: monster, name: "Scooby")
-user_monster2 = UserMonster.create(hunger_level: 80, happiness: 72, power: 69, user_id: user2, monster_id: monster2, name: "Fred")
-user_monster3 = UserMonster.create(hunger_level: 90, happiness: 88, power: 79, user_id: user3, monster_id: monster3, name: "Shaggy")
+user_monster = UserMonster.create(hunger_level: 100, happiness: 78, power: 59, user: user, monster: monster, name: "Scooby")
+user_monster2 = UserMonster.create(hunger_level: 80, happiness: 72, power: 69, user: user2, monster: monster2, name: "Fred")
+user_monster3 = UserMonster.create(hunger_level: 90, happiness: 88, power: 79, user: user3, monster: monster3, name: "Shaggy")
 
 
