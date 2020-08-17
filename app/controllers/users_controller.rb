@@ -8,6 +8,8 @@ class UsersController < ApplicationController
 
     def show
         user = User.find(params[:id])
+        
+        render json: user.as_json.merge(monster: user.monster, stats: user.user_monster)
     end
 
     def create
