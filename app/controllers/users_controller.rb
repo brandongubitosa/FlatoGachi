@@ -12,6 +12,8 @@ class UsersController < ApplicationController
         render json: user.as_json.merge(monster: user.monster, stats: user.user_monster)
     end
 
+
+
     def create
        user = User.create!(user_params)
 
@@ -24,6 +26,12 @@ class UsersController < ApplicationController
         user.destroy!
 
         render json: {}
+    end
+
+    def login
+        user = User.find_by(name: params[:name])
+
+        render json: user.as_json.merge(monster: user.user_monster.monster, stats: user.user_monster)
     end
 
     private
