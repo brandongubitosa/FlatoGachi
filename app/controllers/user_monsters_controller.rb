@@ -14,8 +14,9 @@ class UserMonstersController < ApplicationController
     end
 
     def create
-        userMonster = UserMonster.create!(userMonster_params)
-
+        userMonster = UserMonster.new(userMonster_params)
+        userMonster.create_base_stats
+        userMonster.save
         render json: userMonster.as_json.merge(monster: userMonster.monster)
         
     end
