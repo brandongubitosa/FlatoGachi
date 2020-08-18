@@ -30,8 +30,12 @@ class UsersController < ApplicationController
 
     def login
         user = User.find_by(name: params[:name])
-
-        render json: user.as_json.merge(monster: user.user_monster.monster, stats: user.user_monster)
+        
+        if user.user_monster.nil?
+            render json: user
+        else
+            render json: user.as_json.merge(monster: user.user_monster.monster, stats: user.user_monster)
+        end
     end
 
     private
