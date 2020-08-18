@@ -8,8 +8,6 @@ class UserMonstersController < ApplicationController
 
     def show
         userMonster = UserMonster.find(params[:id])
-
-        #render json: userMonster
         render json: userMonster.as_json.merge(monster: userMonster.monster)
     end
 
@@ -27,6 +25,12 @@ class UserMonstersController < ApplicationController
         userMonster.destroy!
 
         render json: {}
+    end
+
+    def update
+        userMonster = UserMonster.find(params[:id])
+        userMonster.update(userMonster_params)
+        render json: userMonster.as_json.merge(monster: userMonster.monster)
     end
 
     private
