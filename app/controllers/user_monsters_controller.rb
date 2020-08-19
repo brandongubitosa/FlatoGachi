@@ -30,6 +30,7 @@ class UserMonstersController < ApplicationController
     def update
         userMonster = UserMonster.find(params[:id])
         userMonster.update(userMonster_params)
+        userMonster.fix_stats
         render json: userMonster.as_json.merge(monster: userMonster.monster)
     end
 
