@@ -3,17 +3,20 @@ class UserMonstersController < ApplicationController
     def index
         userMonsters = UserMonster.all
 
-        render json: userMonsters 
+        render json: userMonsters
     end
 
     def show
         userMonster = UserMonster.find(params[:id])
+        render json: userMonster.as_json.merge(monster: userMonster.monster)
     end
 
     def create
-        userMonster = UserMonster.create!(userMonster_params)
-
-        render json: userMonster 
+        userMonster = UserMonster.new(userMonster_params)
+        userMonster.create_base_stats
+        userMonster.save
+        render json: userMonster.as_json.merge(monster: userMonster.monster)
+        
     end
 
     def destroy
@@ -24,10 +27,16 @@ class UserMonstersController < ApplicationController
         render json: {}
     end
 
+    def update
+        userMonster = UserMonster.find(params[:id])
+        userMonster.update(userMonster_params)
+        render json: userMonster.as_json.merge(monster: userMonster.monster)
+    end
+
     private
 
     def userMonster_params
-        params.require(:userMonster).permit(:hunger_level, :happiness, :power, :user_id, :monster_id, :name)
+        params.require(:user_monster).permit(:hunger_level, :happiness, :power, :user_id, :monster_id, :name)
     end
 end
 
