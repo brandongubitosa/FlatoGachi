@@ -30,7 +30,6 @@ class UsersController < ApplicationController
 
     def login
         user = User.find_by(name: params[:name])
-        
         if user.user_monster.nil?
             render json: user
         else
