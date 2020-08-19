@@ -38,9 +38,11 @@ class UserMonster < ApplicationRecord
                 self[stat] = 0
             end
 
-            self.save
     
         end
+            self.update({happiness: self.happiness, power: self.power, hunger_level: self.hunger_level})
+
+
     end
 
 

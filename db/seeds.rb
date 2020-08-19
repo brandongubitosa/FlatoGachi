@@ -13,10 +13,10 @@ Monster.destroy_all
 UserMonster.destroy_all
 
 
-user1 = User.create(name: 'Michael')
-user2 = User.create(name: 'Scott')
-user3 = User.create(name: 'Todd')
-user4 = User.create(name: 'Patrick Ewing')
+user1 = User.create(name: 'Michael', email: "michael@gmail.com")
+user2 = User.create(name: 'Scott', email: "scott@gmail.com")
+user3 = User.create(name: 'Todd', email: "todd@gmail.com")
+user4 = User.create(name: 'Patrick Ewing', email: "pe@gmail.com")
 
 monster = Monster.create(monster_theme: "Cute", image_url:"https://cdn1.iconfinder.com/data/icons/monster-8-1/512/MonsterV1-92-512.png")
 monster2 = Monster.create(monster_theme: "Cool", image_url:"https://vignette.wikia.nocookie.net/pixar/images/a/af/Johnny_Worthington_III.png/revision/latest?cb=20130808225542")
