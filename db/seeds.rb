@@ -18,9 +18,12 @@ user2 = User.create(name: 'Scott', email: "scott@gmail.com")
 user3 = User.create(name: 'Todd', email: "todd@gmail.com")
 user4 = User.create(name: 'Patrick Ewing', email: "pe@gmail.com")
 
-monster = Monster.create(monster_theme: "Cute", image_url:"https://cdn1.iconfinder.com/data/icons/monster-8-1/512/MonsterV1-92-512.png")
-monster2 = Monster.create(monster_theme: "Cool", image_url:"https://vignette.wikia.nocookie.net/pixar/images/a/af/Johnny_Worthington_III.png/revision/latest?cb=20130808225542")
-monster3 = Monster.create(monster_theme: "Scary", image_url:"https://www.snesmaps.com/maps/ChronoTrigger/sprites/enemies/bosses/Lavos.png")
+monster = Monster.create(monster_theme: "Cute", image_url:"https://cdn1.iconfinder.com/data/icons/monster-8-1/512/MonsterV1-92-512.png", message: " likes cuddling and all things fuzzy.")
+monster2 = Monster.create(monster_theme: "Cool", image_url:"./cool_monster.png", message: " was voted most popular monster ten years in a row.")
+monster3 = Monster.create(monster_theme: "Scary", image_url:"https://www.snesmaps.com/maps/ChronoTrigger/sprites/enemies/bosses/Lavos.png", message: " once made a whole highschool cry with one look.")
+
+
+#"https://vignette.wikia.nocookie.net/pixar/images/a/af/Johnny_Worthington_III.png/revision/latest?cb=20130808225542"
 
 user_monster = UserMonster.create(hunger_level: 100, happiness: 78, power: 59, user: user1, monster: monster, name: "Scooby")
 user_monster2 = UserMonster.create(hunger_level: 80, happiness: 72, power: 69, user: user2, monster: monster2, name: "Fred")
