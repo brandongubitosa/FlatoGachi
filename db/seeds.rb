@@ -18,7 +18,7 @@ user2 = User.create(name: 'Scott', email: "scott@gmail.com")
 user3 = User.create(name: 'Todd', email: "todd@gmail.com")
 user4 = User.create(name: 'Patrick Ewing', email: "pe@gmail.com")
 
-monster = Monster.create(monster_theme: "Cute", image_url:"https://img.pngio.com/cartoon-pictures-of-monsters-clipart-images-gallery-for-free-cute-animated-monster-png-776_800.png", message: " likes cuddling and all things fuzzy.")
+monster = Monster.create(monster_theme: "Cute", image_url:"https://i.pinimg.com/originals/e3/95/bc/e395bc2aff10f0b95775360b746f6343.png", message: " likes cuddling and all things fuzzy.")
 monster2 = Monster.create(monster_theme: "Cool", image_url:"./cool_monster.png", message: " was voted most popular monster ten years in a row.")
 monster3 = Monster.create(monster_theme: "Scary", image_url:"https://vignette.wikia.nocookie.net/marvelvscapcom/images/3/38/Firebrand_MvCI_render.png/revision/latest?cb=20170822114024", message: " once made a whole highschool cry with one look.")
 
