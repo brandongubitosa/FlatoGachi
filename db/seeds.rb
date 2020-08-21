@@ -14,7 +14,7 @@ UserMonster.destroy_all
 
 
 user1 = User.create(name: 'Michael', email: "michael@gmail.com")
-user2 = User.create(name: 'Scott', email: "scott@gmail.com")
+user2 = User.create(name: 'Rachel', email: "rachel@gmail.com")
 user3 = User.create(name: 'Todd', email: "todd@gmail.com")
 user4 = User.create(name: 'Patrick Ewing', email: "pe@gmail.com")
 
